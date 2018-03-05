@@ -51,7 +51,7 @@ grid = {
 },
 
 snake = {
-	direction: null, /* beschriftet die richtung */
+	direction: null, /* beschriftet die richtung */ //Sorry aber was heisst das?
 	last: null,		 
 	_queue: null,	 
 	init: function(d, x, y) {
@@ -64,7 +64,7 @@ snake = {
 		this.last = this._queue[0];
 	},
 	remove: function() { /*bewegt die schlange*/
-		// rückt das letzt teil nach vorne
+		// rückt das letzt teil nach vorne ... nöd ganz
 		return this._queue.pop();
 	}
 };
@@ -110,7 +110,7 @@ function main() {
 	loop();
 }
 /**
- * Bei einem fehler resetet er das spiel
+ * Bei einem fehler resetet er das spiel 
  */
 function init() {
 	score = 0;
@@ -121,7 +121,7 @@ function init() {
 	setFood();
 }
 /**
- * Der gameloop funktion ist das um das spiel zu rendern
+ * Der gameloop funktion ist das um das spiel zu rendern //Google translate oder was isch das für dütsch??
  */
 function loop() {
 	update();
@@ -147,7 +147,7 @@ function update() {
 	if (frames%5 === 0) {
 		var nx = snake.last.x;
 		var ny = snake.last.y;
-		// aktualisiert die Position der schlange.
+		// aktualisiert die Position der Schlange.
 		switch (snake.direction) {
 			case LEFT:
 				nx--;
@@ -167,7 +167,7 @@ function update() {
 			0 > ny || ny > grid.height-1 ||
 			grid.get(nx, ny) === SNAKE
 		) {
-			return init();
+			return init(); // da wirds game wieder gstartet
 		}
 		if (grid.get(nx, ny) === FRUIT) {
 			// signalisiert dem score, dass eine frucht aufgelesen  wurde.
