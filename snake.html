@@ -1,24 +1,25 @@
 <html lang="en">
 <head>
-    
-    <link rel="stylesheet" href="snake.css"> 
-    <meta charset="UTF-8">
+    	<link rel="stylesheet" href="snake.css"> 
+    	<meta charset="UTF-8">
 	<title>Snake Game</title>
+	// de code im script tag isch jquery und benötigt eh externi libary google hostet das https://developers.google.com/speed/libraries/#jquery
+	<script>
+	    $("#StartButton").click(function () {
+		$("#SplashScreen").hide();
+		$("#GameCanvas").show();
+		   //versteckt en und blendet ihn grad wieder ih... probier .toggle()
+	    });
+	</script>
 </head>
-<body style="background-color:#3ed958;"> 
-    <div id="SplashScreen">
-<h1>Snake game</h1>
-<input id="StartButton" type="button" value="Start"/>
-</div>
+<body style="background-color:#3ed958;">  <!-- Kei inline styles -->
+    	<div id="SplashScreen">
+		<h1>Snake game</h1>
+		<input id="StartButton" type="button" value="Start"/>
+	</div>
 
-<canvas id="GameCanvas" style="display: none;">Game Stuff</canvas>
+	<canvas id="GameCanvas" style="display: none;">Game Stuff</canvas>
 
-<script>
-    $("#StartButton").click(function () {
-        $("#SplashScreen").hide();
-        $("#GameCanvas").show();
-    });
-</script>
-	<script src="snake.js"></script> 
+<script src="snake.js"></script> 
 </body>
 </html>      
