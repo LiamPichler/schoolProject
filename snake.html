@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="snake.css"> 
+    <meta charset="UTF-8">
+	<title>Snake Game</title>
+</head>
+<body style="background-color:#3ed958;"> 
+    <div id="SplashScreen">
+<h1>Snake game</h1>
+<input id="StartButton" type="button" value="Start"/>
+</div>
+
+<canvas id="GameCanvas" style="display: none;">Game Stuff</canvas>
+
+<script>
+    $("#StartButton").click(function () {
+        $("#SplashScreen").hide();
+        $("#GameCanvas").show();
+    });
+</script>
+	<script src="snake.js"></script> 
+</body>
+</html>      
