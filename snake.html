@@ -3,12 +3,11 @@
     	<link rel="stylesheet" href="snake.css"> 
     	<meta charset="UTF-8">
 	<title>Snake Game</title>
-	// de code im script tag isch jquery und benötigt eh externi libary google hostet das https://developers.google.com/speed/libraries/#jquery
-	<script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
 	    $("#StartButton").click(function () {
-		$("#SplashScreen").hide();
-		$("#GameCanvas").show();
-		   //versteckt en und blendet ihn grad wieder ih... probier .toggle()
+            $("#SplashScreen").toggle();
+		   
 	    });
 	</script>
 </head>
