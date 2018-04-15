@@ -51,7 +51,7 @@ grid = {
 },
 
 snake = {
-	direction: null, /* beschriftet die richtung */ //Sorry aber was heisst das?
+	direction: null, 
 	last: null,		 
 	_queue: null,	 
 	init: function(d, x, y) {
@@ -63,8 +63,7 @@ snake = {
 		this._queue.unshift({x:x, y:y});
 		this.last = this._queue[0];
 	},
-	remove: function() { /*bewegt die schlange*/
-		// rückt das letzt teil nach vorne ... nöd ganz
+	remove: function() {  
 		return this._queue.pop();
 	}
 };
@@ -123,7 +122,7 @@ function init() {
 }
 
 /**
- * Der gameloop funktion ist das um das spiel zu rendern //Google translate oder was isch das für dütsch??
+ * rendert das spiel
  */
 function loop() {
 	update();
