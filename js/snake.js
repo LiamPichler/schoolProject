@@ -67,6 +67,7 @@ snake = {
 		return this._queue.pop();
 	}
 };
+
 /**
  * platziert eine zufällige frucht.
  */
@@ -106,7 +107,6 @@ function main() {
 	});
 	// Startet den Gameloop.
 	init();
-	loop();
 }
 /**
  * Bei einem fehler resetet er das spiel 
@@ -118,6 +118,8 @@ function init() {
 	snake.init(UP, sp.x, sp.y);
 	grid.set(SNAKE, sp.x, sp.y);
 	setFood();
+    display = $('#time');
+	countdown(3, display);
 }
 
 /**
@@ -167,8 +169,9 @@ function update() {
 			0 > ny || ny > grid.height-1 ||
 			grid.get(nx, ny) === SNAKE
 		) {
-			alert("k");
-			return init(); // da wirds game wieder gstartet
+			$('#score').text(score);
+			$("#endScreen").show();
+			//return init(); // da wirds game wieder gstartet
 		}
 		if (grid.get(nx, ny) === FRUIT) {
 			// signalisiert dem score, dass eine frucht aufgelesen  wurde.
@@ -208,3 +211,20 @@ function draw() {
 	ctx.fillText("SCORE: " + score, 1, canvas.height-1);
 }
 
+function countdown(timer, display) {
+    var t = setInterval(function () {
+
+        display.text(timer);
+
+        if (--timer < 0) {
+        	if(timer == -1){
+            	display.text("los!");
+        	}else{
+	            display.text("");
+	            clearInterval(t);
+				loop();
+
+        	}
+        }
+    }, 1000);
+}
