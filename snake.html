@@ -1,24 +1,22 @@
 <html lang="en">
 <head>
-    	<link rel="stylesheet" href="snake.css"> 
+    	<link rel="stylesheet" href="css/snake.css"> 
     	<meta charset="UTF-8">
 	<title>Snake Game</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-	    $("#StartButton").click(function () {
+	    /*$("#StartButton").click(function () {
             $("#SplashScreen").toggle();
 		   
-	    });
+	    });*/
 	</script>
 </head>
-<body style="background-color:#3ed958;">  <!-- Kei inline styles -->
-    	<div id="SplashScreen">
+<body>
+	<div id="splashScreen">
 		<h1>Snake game</h1>
-		<input id="StartButton" type="button" value="Start"/>
+		<div id="start">Start</div>
 	</div>
 
-	<canvas id="GameCanvas" style="display: none;">Game Stuff</canvas>
-
-<script src="snake.js"></script> 
+<script src="js/snake.js"></script> 
 </body>
 </html>      

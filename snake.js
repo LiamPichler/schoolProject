@@ -112,7 +112,6 @@ function main() {
  * Bei einem fehler resetet er das spiel 
  */
 function init() {
-    screensizex,screensizey;
     score = 0;
 	grid.init(EMPTY, COLS, ROWS);
 	var sp = {x:Math.floor(COLS/2), y:ROWS-1};
@@ -168,6 +167,7 @@ function update() {
 			0 > ny || ny > grid.height-1 ||
 			grid.get(nx, ny) === SNAKE
 		) {
+			alert("k");
 			return init(); // da wirds game wieder gstartet
 		}
 		if (grid.get(nx, ny) === FRUIT) {
@@ -207,4 +207,4 @@ function draw() {
 	ctx.fillStyle = "#000";
 	ctx.fillText("SCORE: " + score, 1, canvas.height-1);
 }
-main();
+
